@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  wow-website:
+    build: .
+    container_name: sde-wow-website
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - wow-network
+    env_file:
+      - .env
+
+networks:
+  wow-network:
+    external: true
