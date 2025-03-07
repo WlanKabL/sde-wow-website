@@ -14,4 +14,4 @@ services:
 
 networks:
   wow-network:
-    external: true
+    driver: bridge
