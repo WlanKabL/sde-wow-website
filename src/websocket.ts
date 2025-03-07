@@ -9,7 +9,7 @@ let isReconnecting = false;
 let reconnectingTimeout: NodeJS.Timeout | null = null;
 
 const connectWebSocket = () => {
-    if (isReconnecting) return; // Verhindert doppeltes Reconnecten
+    if (isReconnecting) return;
 
     ws = new WebSocket(WEBSOCKET_URL);
 
@@ -28,7 +28,7 @@ const connectWebSocket = () => {
     });
 
     ws.on("error", (err) => {
-        console.error("❌ WebSocket-Fehler:", err);
+        // console.error("❌ WebSocket-Fehler:", err);
     });
 };
 
