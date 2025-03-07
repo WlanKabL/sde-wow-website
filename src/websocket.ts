@@ -1,8 +1,12 @@
 import WebSocket from "ws";
 import { OAuthPayload } from "./types";
-import { clear } from "console";
+import dotenv from "dotenv";
 
-const WEBSOCKET_URL = "ws://localhost:3001"; // Adresse des Discord-Bot-WebSockets
+dotenv.config();
+
+const WEBSOCKET_URL = process.env.DISCORD_BOT_WS_URL ?? "ws://localhost:3001"; // Adresse des Discord-Bot-WebSockets
+
+console.log('WEBSOCKET_URL: ', WEBSOCKET_URL);
 
 let ws: WebSocket | null = null;
 let isReconnecting = false;
