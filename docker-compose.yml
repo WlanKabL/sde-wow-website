@@ -6,7 +6,7 @@ services:
     container_name: sde-wow-website
     restart: always
     ports:
-      - "3000:3000"
+      - "11564:3000"
     networks:
       - wow-network
     env_file:
