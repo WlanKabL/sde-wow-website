@@ -23,7 +23,7 @@ const connectWebSocket = () => {
     });
 
     ws.on("close", () => {
-        console.log("❌ Verbindung verloren. Erneuter Versuch in 5 Sekunden...");
+        // console.log("❌ Verbindung verloren. Erneuter Versuch in 5 Sekunden...");
         reconnectingTimeout = setTimeout(connectWebSocket, 5000);
     });
 
