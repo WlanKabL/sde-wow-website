@@ -1,7 +1,5 @@
-version: '3.8'
-
 services:
-  wow-website:
+  sde-wow-website:
     build: .
     container_name: sde-wow-website
     restart: always
@@ -9,9 +7,12 @@ services:
       - "11564:3000"
     networks:
       - wow-network
+    depends_on:
+      - wow-discord-bot  # WICHTIG: Stellt sicher, dass der Bot zuerst startet
     env_file:
       - .env
 
 networks:
   wow-network:
-    driver: bridge
+    name: wow-network
+    external: true
