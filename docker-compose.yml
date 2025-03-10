@@ -7,8 +7,6 @@ services:
       - "11564:3000"
     networks:
       - wow-network
-    depends_on:
-      - wow-discord-bot  # WICHTIG: Stellt sicher, dass der Bot zuerst startet
     env_file:
       - .env
 
