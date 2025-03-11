@@ -5,6 +5,8 @@ import { sendOAuthData } from "./websocket";
 const router = Router();
 
 router.post("/transfer-oauth", async (req: any, res: any) => {
+    console.log("--------------------------------");
+
     const { code, state, provider }: OAuthPayload = req.body;
 
     if (!code || !state) {
@@ -21,12 +23,12 @@ router.post("/transfer-oauth", async (req: any, res: any) => {
         } else {
             return res.status(500).json({
                 error: response?.message || "Unknown error occurred.",
-                type: response?.type || "internal_error",
+                type: response?.type || "websocket_error",
             });
         }
-    } catch (error) {
+    } catch (error: any) {
         console.error("❌ Error sending OAuth data:", error);
-        return res.status(500).json({ error: "WebSocket connection failed.", type: "websocket_error" });
+        return res.status(500).json({ error: error?.message ?? "WebSocket connection failed.", type: "websocket_error" });
     }
 });
 

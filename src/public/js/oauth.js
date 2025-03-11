@@ -1,4 +1,6 @@
 window.onload = async () => {
+    console.log("--------------------------------");
+
     const url = window.location.href.toLowerCase();
     const provider = url.includes("battlenet") ? "battlenet" : url.includes("warcraftlogs") ? "warcraftlogs" : "unknown";
 
@@ -20,7 +22,8 @@ window.onload = async () => {
             });
 
             if (!response.ok) {
-                throw new Error(`Server responded with status ${response.status}`);
+                const errorBody = await response.json();
+                throw { status: response.status, statusText: response.statusText, body: errorBody };
             }
 
             const result = await response.json();
@@ -31,7 +34,8 @@ window.onload = async () => {
             statusElement.classList.add("success");
         } catch (error) {
             console.error("❌ Fehler beim Senden der OAuth-Daten:", error);
-            statusElement.innerText = "❌ Fehler: Konnte OAuth-Daten nicht übertragen.";
+
+            statusElement.innerText = error?.body?.error ? "❌ " + error.body.error : "❌ Fehler: Konnte OAuth-Daten nicht übertragen.";
             statusElement.classList.add("error");
         }
     } else {

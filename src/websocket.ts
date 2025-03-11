@@ -47,25 +47,34 @@ export const sendOAuthData = async (data: OAuthPayload): Promise<any> => {
             return reject({ message: "WebSocket is not connected.", type: "websocket_disconnected" });
         }
 
-        ws.send(JSON.stringify(data));
-        console.log("📤 OAuth-Daten gesendet:", data);
+        const requestId = data.state; // Eindeutige ID für die Zuordnung der Antwort
+        console.log("📤 Sending OAuth data.");
 
-        // Listener für eine Antwort
         const handleMessage = (message: WebSocket.RawData) => {
             try {
                 const response = JSON.parse(message.toString());
-                resolve(response);
+
+                if (response.state === requestId) {
+                    console.log("✅ Response received:", response);
+                    ws?.off("message", handleMessage);
+                    resolve(response);
+                }
             } catch (error) {
+                console.error("❌ Failed to parse response:", error);
                 reject({ message: "Failed to parse response.", type: "response_error" });
             }
         };
 
-        ws.once("message", handleMessage);
+        // WebSocket-Nachricht senden
+        ws.send(JSON.stringify(data));
 
-        // Timeout, falls keine Antwort kommt (5s)
+        // Event-Listener nur für dieses `state`
+        ws.on("message", handleMessage);
+
+        // Timeout nach 10 Sekunden
         setTimeout(() => {
             ws?.off("message", handleMessage);
-            reject({ message: "No response from WebSocket.", type: "timeout" });
-        }, 5000);
+            reject({ message: "No response from WebSocket.", type: "timeout", state: requestId });
+        }, 10000);
     });
 };
