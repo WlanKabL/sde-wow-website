@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SchattenBot – Dein WoW-Companion</title>
+        <style>
+            :root {
+                --bg: #0a0a0f;
+                --text: #e0e6ed;
+                --accent: #4afaf8;
+                --accent-text: #1f1912;
+                --card-bg: #1a1a1f;
+            }
+
+            body {
+                margin: 0;
+                font-family: "Segoe UI", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+            }
+
+            header {
+                background: rgba(0, 0, 0, 0.9);
+                padding: 0.2rem 5%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                backdrop-filter: blur(10px);
+            }
+
+            header h1 {
+                font-size: 2rem;
+                color: var(--accent);
+                letter-spacing: 1px;
+            }
+
+            .btn-discord {
+                background: var(--accent);
+                color: var(--accent-text);
+                padding: 0.7rem 1.5rem;
+                border: none;
+                border-radius: 6px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: background 0.3s ease;
+            }
+
+            .btn-discord:hover {
+                background: #2d8fe2;
+            }
+
+            section {
+                padding: 5rem 5%;
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                max-width: 700px;
+                margin: 0 auto 2rem auto;
+            }
+
+            .btn-primary {
+                background: var(--accent);
+                color: var(--accent-text);
+                padding: 1rem 2rem;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                transition: background 0.3s ease;
+            }
+
+            .btn-primary:hover {
+                background: #2d8fe2;
+            }
+
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .card {
+                background: var(--card-bg);
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 0 12px rgba(78, 160, 244, 0.2);
+                transition: transform 0.3s ease;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+            .card h3 {
+                margin-top: 0;
+                color: var(--accent);
+            }
+
+            footer {
+                background: #101014;
+                text-align: center;
+                padding: 2rem 5%;
+                margin-top: 5rem;
+                color: #888;
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    padding: 0.7rem 5%;
+                    flex-direction: row;
+                    text-align: center;
+                }
+
+                header h1 {
+                    font-size: 1.5rem;
+                }
+
+                .btn-discord {
+                    padding: 0.5rem 1rem;
+                    font-size: 0.7rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Der Schatten Bot</h1>
+            <a
+                class="btn-discord"
+                href="https://discord.com/oauth2/authorize?client_id=1343228153157648536&scope=bot&permissions=8"
+                target="_blank"
+                >🔮 Bot hinzufügen</a
+            >
+        </header>
+
+        <section class="hero">
+            <h2>Ein neuer Begleiter für deine WoW-Community</h2>
+            <p>
+                Der SchattenBot erhebt sich aus der Dunkelheit, um Gilden, Clans
+                und Communities zu stärken. Er ist mehr als ein Tool – er ist
+                ein Hüter deiner Daten, ein Tor zur Blizzard-API und ein
+                mystischer Verbündeter für jede Organisation.
+            </p>
+            <a
+                href="https://discord.com/oauth2/authorize?client_id=1343228153157648536&scope=bot&permissions=8"
+                class="btn-primary"
+                >➕ Jetzt kostenlos hinzufügen</a
+            >
+        </section>
+
+        <section>
+            <h2>✨ Features für Gilden, Spieler und Admins</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🌐 Mehrsprachige Unterstützung</h3>
+                    <p>
+                        Der Bot erkennt automatisch die bevorzugte Sprache
+                        deines Servers und passt alle Texte, Befehle und
+                        UI-Elemente entsprechend an. Unterstützt werden alle
+                        offiziellen Blizzard-Sprachen.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>📋 Charakter-Synchronisation</h3>
+                    <p>
+                        Verbinde deinen Battle.net-Account und erhalte
+                        tiefgehende Charakterinformationen direkt im Discord –
+                        inklusive Level, Item-Level, Gilde, Spezialisierung und
+                        mehr.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🏰 Bewerbungssystem</h3>
+                    <p>
+                        Spieler können sich mit wenigen Klicks bei eurer Gilde
+                        bewerben. Admins erhalten übersichtliche Bewerbungen
+                        direkt im Discord – mit moderner Slash-Command UX.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🔍 Suche & Datenbank</h3>
+                    <p>
+                        Suche nach Charakteren, Realms, Mounts oder
+                        PvP-Ranglisten. Der Bot greift auf die neusten
+                        Blizzard-Daten zu und hält dich auf dem Laufenden.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🦄 Sammlung & Reminder</h3>
+                    <p>
+                        Plane deine Mount- oder Pet-Farmen direkt im Discord.
+                        Setze Erinnerungen und lasse dich benachrichtigen, wenn
+                        ein Weekly-Reset ansteht.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>📊 Daten-Seeding & API-Monitoring</h3>
+                    <p>
+                        Für Power-User: Automatisches Seeding von Daten wie
+                        Zonen, Questtypen oder NPCs mit intelligenter Verwaltung
+                        und Reload-Funktion.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🛡 Adminfreundlich & DSGVO-konform</h3>
+                    <p>
+                        Alle Daten sind servergebunden. Kein Caching auf
+                        globaler Ebene. Du hast jederzeit volle Kontrolle und
+                        kannst bei Bedarf manuell löschen.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🗓 Raid-Planung (in Arbeit)</h3>
+                    <p>
+                        Organisiere Raids mit automatischer Rollenverteilung,
+                        Teilnahmebestätigung und Erinnerungen – direkt im
+                        Discord.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🧙 Warum SchattenBot?</h2>
+            <p>
+                Weil World of Warcraft mehr ist als ein Spiel – es ist ein
+                Universum. Und dieser Bot ist geschaffen, um es mit Leben zu
+                füllen. Für Gilden, die keine Lust mehr auf halbgare Addons
+                haben. Für Communities, die Stil und Struktur vereinen wollen.
+                Und für dich – der Ordnung ins Chaos bringt.
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2025 Schatten der Ewigkeit – SchattenBot v1.0. Mit Herz für
+            die WoW-Community gebaut.
+        </footer>
+    </body>
+</html>
