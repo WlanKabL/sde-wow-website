@@ -3,218 +3,215 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Schatten der Ewigkeit – WoW Gilde</title>
+        <title>Schatten der Ewigkeit</title>
         <style>
-            /* Grundfarben */
-            :root {
-                --bg-color: #0d1117;
-                --text-color: #e6edf3;
-                --accent-color: #3498db;
-                --section-bg: #161b22;
-            }
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
             body {
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                background-color: var(--bg-color);
-                color: var(--text-color);
+                margin: 0;
+                font-family: "Segoe UI", sans-serif;
+                background-color: #0d1117;
+                color: #e6edf3;
                 line-height: 1.6;
             }
 
-            a {
-                color: var(--accent-color);
-                text-decoration: none;
-            }
-
             header {
-                padding: 4rem 2rem;
+                background: linear-gradient(to right, #0f172a, #1e293b);
+                padding: 80px 20px;
                 text-align: center;
-                background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
             }
 
             header h1 {
                 font-size: 2.8rem;
-                margin-bottom: 1rem;
+                color: #60a5fa;
             }
 
             header p {
                 font-size: 1.2rem;
-                color: #c9d1d9;
+                max-width: 600px;
+                margin: 0 auto 20px;
+                color: #cbd5e1;
             }
 
             .cta-button {
-                display: inline-block;
-                margin-top: 2rem;
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
-                background-color: var(--accent-color);
+                padding: 12px 28px;
+                background-color: #3b82f6;
                 color: white;
-                border-radius: 8px;
-                transition: background-color 0.3s ease;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                text-decoration: none;
+                transition: background 0.3s ease;
             }
 
             .cta-button:hover {
-                background-color: #2980b9;
+                background-color: #2563eb;
             }
 
             section {
-                padding: 4rem 2rem;
-            }
-
-            section:nth-child(even) {
-                background-color: var(--section-bg);
+                padding: 60px 20px;
+                max-width: 1000px;
+                margin: auto;
             }
 
             .section-title {
                 font-size: 2rem;
-                margin-bottom: 1rem;
-                color: var(--accent-color);
-                text-align: center;
+                margin-bottom: 20px;
+                color: #60a5fa;
             }
 
-            .features {
+            .card-grid {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
-                gap: 2rem;
-                margin-top: 2rem;
+                gap: 20px;
             }
 
-            .feature {
-                flex: 1 1 300px;
-                background-color: #21262d;
-                padding: 2rem;
+            .card {
+                flex: 1 1 280px;
+                background-color: #1e293b;
+                padding: 20px;
                 border-radius: 10px;
-                text-align: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .card img {
+                width: 100%;
+                border-radius: 6px;
+                margin-bottom: 15px;
+            }
+
+            .card h3 {
+                margin-top: 0;
+                color: #93c5fd;
             }
 
             footer {
-                background-color: #0d1117;
+                background-color: #0f172a;
                 text-align: center;
-                padding: 2rem;
-                font-size: 0.9rem;
-                color: #6e7681;
+                padding: 40px 20px;
+                color: #94a3b8;
             }
 
-            @media screen and (max-width: 768px) {
+            @media (max-width: 768px) {
                 header h1 {
-                    font-size: 2rem;
+                    font-size: 2.2rem;
                 }
 
-                .section-title {
-                    font-size: 1.5rem;
-                }
-
-                .features {
+                .card-grid {
                     flex-direction: column;
-                    align-items: center;
                 }
             }
         </style>
     </head>
     <body>
         <header>
-            <h1>Schatten der Ewigkeit</h1>
+            <h1>🖤 Schatten der Ewigkeit</h1>
             <p>
-                Eine deutschsprachige World of Warcraft Gilde für Helden, die
-                tiefer gehen.
+                Eine familiäre WoW-Gilde, bereit für jedes Abenteuer. Tritt uns
+                bei und werde Teil einer epischen Reise durch Azeroth.
             </p>
-            <a
-                href="https://discord.gg/dein-discord-invite"
-                class="cta-button"
-                target="_blank"
-                >Jetzt Discord beitreten</a
+            <a href="https://discord.gg/dein-einladungslink" class="cta-button"
+                >Jetzt auf Discord beitreten</a
             >
         </header>
 
         <section>
-            <h2 class="section-title">Über uns</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto">
-                Wir sind eine ambitionierte, aber entspannte Gilde mit Fokus auf
-                Gemeinschaft, Progress und gegenseitigem Respekt. Ob Raids,
-                Mythic+, PvP oder chillige Abende im Voice – bei uns findest du
-                deinen Platz.
+            <h2 class="section-title">🎮 Über uns</h2>
+            <p>
+                🎉 Herzlich Willkommen im "Schatten der Ewigkeit"
+                Discord-Server! 🎉
+            </p>
+            <p>
+                Wir freuen uns riesig, dass du dich uns angeschlossen hast! Hier
+                sind alle World of Warcraft Fans willkommen, die zusammen
+                spannende Abenteuer erleben, Dungeons und Raids bezwingen und
+                die epische Welt von Azeroth entdecken möchten.
+            </p>
+            <p>
+                Unsere Regeln sind einfach: Sei respektvoll, freundlich und hab
+                Spaß. Wir bieten dir regelmäßige Aktivitäten, Memes,
+                Screenshots, Gildenplanung und natürlich Hilfe bei allen Fragen
+                rund um WoW.
             </p>
         </section>
 
         <section>
-            <h2 class="section-title">Unser Discord Bot</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🎮 Charakter-Verknüpfung</h3>
+            <h2 class="section-title">🧙‍♀️ Gründer & Crew</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img
+                        src="https://via.placeholder.com/400x200?text=Gabberdoll"
+                        alt="Gabberdoll"
+                    />
+                    <h3>𝕲𝖆𝖇𝖇𝖊𝖗𝖉𝖔𝖑𝖑</h3>
                     <p>
-                        Verbinde deinen Battle.net Account und zeige deine
-                        Charaktere direkt im Discord an.
+                        ✨ Gründerin des Servers, aktive Gildenleiterin seit
+                        2024. Ihre Vision: Eine starke, freundliche Gilde mit
+                        Herz! 🖤
                     </p>
                 </div>
-                <div class="feature">
-                    <h3>📊 Fortschrittsanzeigen</h3>
+                <div class="card">
+                    <img
+                        src="https://via.placeholder.com/400x200?text=WlanKabL"
+                        alt="WlanKabL"
+                    />
+                    <h3>&lt;/WlanKabL&gt;</h3>
                     <p>
-                        Zeige Raid-Achievements, Gear-Stats und PvP-Erfolge in
-                        deinem Profil.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3>⚙️ Automatische Rollen</h3>
-                    <p>
-                        Erhalte automatisch Rollen basierend auf deiner Klasse
-                        oder Spezialisierung.
+                        🧠 Technikmeister & rechte Hand. Verantwortlich für
+                        unseren Bot, Automatisierungen und Community-Support.
                     </p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title">Warum Schatten der Ewigkeit?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>🛡️ Struktur & Leitung</h3>
-                    <p>
-                        Erfahrene Gildenleitung mit klarer Vision & Raum für
-                        Mitgestaltung.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3>🌍 Gemeinschaft</h3>
-                    <p>
-                        Mehr als nur Spieler – wir sind Freunde mit gemeinsamen
-                        Zielen.
-                    </p>
-                </div>
-                <div class="feature">
-                    <h3>🧙‍♂️ Progress</h3>
-                    <p>
-                        Raid- & M+ Fortschritt mit Ehrgeiz – aber ohne toxische
-                        Stimmung.
-                    </p>
-                </div>
-            </div>
+            <h2 class="section-title">🤖 Unser Discord Bot</h2>
+            <p>
+                Unser selbst entwickelter Discord Bot hilft dir bei allem rund
+                um deine WoW-Charaktere. Verbinde dein Battle.net Konto, zeige
+                deine Charaktere an, behalte deinen Fortschritt im Blick und
+                noch vieles mehr.
+            </p>
+            <p>
+                Demnächst kommen Features wie Gilden-Verwaltung, automatische
+                Dungeon-Timings, Mount-Tracker, Reminder-Systeme und vieles
+                mehr. Alles entwickelt von uns – für uns.
+            </p>
         </section>
 
         <section>
-            <h2 class="section-title">Bereit, Teil der Ewigkeit zu werden?</h2>
-            <p style="text-align: center">
-                Trete unserer Gilde und Community bei. Wir freuen uns auf dich!
-            </p>
-            <div style="text-align: center; margin-top: 2rem">
-                <a
-                    href="https://discord.gg/dein-discord-invite"
-                    class="cta-button"
-                    target="_blank"
-                    >Discord beitreten</a
-                >
+            <h2 class="section-title">🌌 Eindrücke aus Azeroth</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img
+                        src="https://via.placeholder.com/400x200?text=Raid+Night"
+                        alt="Raid Night"
+                    />
+                    <h3>Raid Nights</h3>
+                    <p>
+                        Epische Kämpfe in Icecrown, Ulduar & mehr – gemeinsam
+                        durch dick und dünn!
+                    </p>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://via.placeholder.com/400x200?text=Gildenfoto"
+                        alt="Gildenfoto"
+                    />
+                    <h3>Gildenmomente</h3>
+                    <p>
+                        Unsere Community liebt Screenshots – und wir feiern
+                        jeden neuen Mount-Drop!
+                    </p>
+                </div>
             </div>
         </section>
 
         <footer>
-            © 2025 Schatten der Ewigkeit – World of Warcraft Gilde<br />
-            Dies ist eine temporäre Landing Page – vollständige Website folgt
-            bald.
+            <p>
+                &copy; 2025 Schatten der Ewigkeit – Eine WoW-Gilde mit Herz 🖤 |
+                Designed by &lt;/WlanKabL&gt;
+            </p>
         </footer>
     </body>
 </html>
